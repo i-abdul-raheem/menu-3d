@@ -1,0 +1,231 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.nav-container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #434750, #374144);
+}
+
+.nav-container ul{
+  position: relative;
+  transform: skewY(-15deg);
+}
+
+.nav-container ul li{
+  position: relative;
+  list-style: none;
+  width: 200px;
+  background: #3e3f46;
+  padding: 15px;
+  z-index: var(--ncl);
+}
+
+.nav-container ul li:hover{
+  transform: translate(-50px);
+}
+
+.nav-container ul li::before{
+  content: '';
+  position: absolute;
+  width: 40px;
+  top: 0;
+  left: -40px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.4s;
+}
+
+/*GITHUB*/
+#git::before{
+	font-family: "Font Awesome 5 Brands";
+	content: "\f09b";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+#git:hover::before{
+  /*background: #2982b9;*/
+  color: #fff;
+}
+
+#git:hover::after{
+  /*background: #2982b9;*/
+}
+
+#git:hover a{
+  color: #fff;
+}
+/*GITHUB END*/
+
+/*FACEBOOK*/
+#fb:hover{
+	background: #183153;
+}
+
+#fb::before{
+	font-family: "Font Awesome 5 Brands";
+	content: "\f39e";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+#fb:hover::before{
+  background: #183153;
+  color: #fff;
+}
+
+#fb:hover::after{
+  background: #183153;
+}
+
+#fb:hover a{
+  color: #fff;
+}
+/*FACEBOOK END*/
+
+/*YOUTUBE*/
+#yt:hover{
+	background: red;
+}
+
+#yt::before{
+	font-family: "Font Awesome 5 Brands";
+	content: "\f167";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+#yt:hover::before{
+  background: red;
+  color: #fff;
+}
+
+#yt:hover::after{
+  background: red;
+}
+
+#yt:hover a{
+  color: #fff;
+}
+/*YOUTUBE END*/
+
+/*LINKEDIN*/
+#linked:hover{
+	background: #0077B5;
+}
+
+#linked::before{
+	font-family: "Font Awesome 5 Brands";
+	content: "\f08c";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+#linked:hover::before{
+  background: #0077B5;
+  color: #fff;
+}
+
+#linked:hover::after{
+  background: #0077B5;
+}
+
+#linked:hover a{
+  color: #fff;
+}
+/*LINKEDIN END*/
+
+/*STACK*/
+#stack:hover{
+	background: #9F3D22;
+}
+
+#stack::before{
+	font-family: "Font Awesome 5 Brands";
+	content: "\f16c";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+#stack:hover::before{
+  background: #9F3D22;
+  color: #fff;
+}
+
+#stack:hover::after{
+  background: #9F3D22;
+}
+
+#stack:hover a{
+  color: #fff;
+}
+/*STACK END*/
+
+.nav-container ul li::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: -40px;
+  left: 0;
+  height: 40px;
+  background: #2e3133;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.4s;
+}
+
+.nav-container ul li:last-child::after{
+  box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+}
+
+.nav-container ul li.head:hover{
+	background: #3e3f46;
+  transform: translate(0px);
+}
+
+.nav-container ul li.head:hover::before{
+  background: #2e3133;
+}
+
+.nav-container ul li.head:hover::after{
+  background: #2e3133;
+}
+
+.nav-container ul li .heading{
+  color: #999;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.4s;
+}
+
+.nav-container ul li a{
+  color: #999;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.4s;
+}
